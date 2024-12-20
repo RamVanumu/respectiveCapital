@@ -3,7 +3,8 @@ const countries = ["India", "United States", "France", "Japan", "Brazil", "Austr
 const capitals = ["New Delhi", "Washington, D.C.", "Paris", "Tokyo", "Brasília", "Canberra", "Berlin", "Ottawa", "Rome", "Seoul"];
 
 const getCapital = function (country) {
-  return capitals[countries.indexOf(country)];
+  const index = countries.indexOf(country);
+  return index < 0 ? 'Not exists in an array.' : capitals[index];
 }
 
 const country = prompt("Enter a country Name : ");
